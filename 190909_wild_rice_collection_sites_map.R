@@ -7,7 +7,7 @@ library(maps)
 
 fread("190909_wild_rice_samples.csv") -> x
 
-pdf("out.pdf")
+pdf("190909_wild_rice_collection_sites.pdf")
 map("state", xlim=c(-98, -89), ylim=c(42,50))
 # Add major lakes
 map("lakes", col="light blue", fill=TRUE, add=TRUE)
