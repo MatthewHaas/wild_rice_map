@@ -9,10 +9,12 @@ library(data.table)
 library(maps)
 
 # Read in data
-x <- fread("191023_2018_wild_rice_samples.csv")
+# Updated and corrected GPS coordinates. Confirmed with Tony Kern and Mingqin (Mike) Shao
+x <- fread("191029_wild_rice_samples.csv")
 
 # Make the figure
-pdf("191023_wild_rice_collection_sites.pdf")
+#pdf("191023_wild_rice_collection_sites.pdf")
+pdf("191029_wild_rice_collection_sites.pdf")
 map("state", xlim=c(-98, -89), ylim=c(42,50))
 # Add major lakes
 map("lakes", col="light blue", fill=TRUE, add=TRUE)
