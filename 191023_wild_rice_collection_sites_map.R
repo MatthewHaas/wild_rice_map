@@ -1,4 +1,5 @@
 # 23 October 2019
+# UPDATED: 6 November 2019
 # WD: /home/jkimball/haasx092/collection_map
 
 # The purpose of this code is to make an updated map (using an updated version of the sample collection file).
@@ -9,12 +10,15 @@ library(data.table)
 library(maps)
 
 # Read in data
-# Updated and corrected GPS coordinates. Confirmed with Tony Kern and Mingqin (Mike) Shao
-x <- fread("191029_wild_rice_samples.csv")
+# Updated and corrected GPS coordinates (191029_wild_rice_samples.csv). Confirmed with Tony Kern and Mingqin (Mike) Shao.
+# The latest and greatest version (191106_wild_rice_samples.csv) has the same GPS coordinates as above, but also has the correct GPS 
+# coordinates of Big Fork River. The previous version was off ~40 miles. Correct coordinates provided by Jacques Duquette.
+x <- fread("191106_wild_rice_samples.csv")
 
 # Make the figure
 #pdf("191023_wild_rice_collection_sites.pdf")
-pdf("191029_wild_rice_collection_sites.pdf")
+#pdf("191029_wild_rice_collection_sites.pdf")
+pdf("191106_wild_rice_collection_sites.pdf")
 map("state", xlim=c(-98, -89), ylim=c(42,50))
 # Add major lakes
 map("lakes", col="light blue", fill=TRUE, add=TRUE)
