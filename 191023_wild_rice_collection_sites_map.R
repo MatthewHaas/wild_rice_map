@@ -1,5 +1,6 @@
 # 23 October 2019
 # UPDATED: 6 November 2019
+# UPDATED AGAIN: 10 January 2020 (changed plot character for Aquatica from circle to triangle)
 # WD: /home/jkimball/haasx092/collection_map
 
 # The purpose of this code is to make an updated map (using an updated version of the sample collection file).
@@ -18,18 +19,23 @@ x <- fread("191106_wild_rice_samples.csv")
 # Make the figure
 #pdf("191023_wild_rice_collection_sites.pdf")
 #pdf("191029_wild_rice_collection_sites.pdf")
-pdf("191106_wild_rice_collection_sites.pdf")
+#pdf("191106_wild_rice_collection_sites.pdf")
+pdf("200110_wild_rice_collection_sites.pdf")
 map("state", xlim=c(-98, -89), ylim=c(42,50))
 # Add major lakes
 map("lakes", col="light blue", fill=TRUE, add=TRUE)
 map("rivers", col=4, add=TRUE) # This is not working.. a different package needed?
 
-points(x=x$Long, y=x$Lat, pch=16, col=x$col)
+# Make a plot character (pch) column and make Z. aquatica a triangle. All others should remain circles.
+x[Location == "Aquatica_species", pch := 17]
+x[Location != "Aquatica_species", pch := 16]
+
+points(x = x$Long, y = x$Lat, pch = x$pch, col = x$col)
 
 # There is no legend because the colors are meant to be interpreted based on the same color scheme as the PCA plots
 legend("bottomright", legend=c("Aquatica species", "Bass Lake", "Big Fork River", "Clearwater River", "Dahler Lake",
 "Decker Lake", "Garfield Lake", "Mud Hen Lake", "Necktie River", "Ottertail River", "Phantom Lake", "Plantagenet",
-"Shell Lake", "Upper Rice Lake"), pch=16, col = x$col, cex=0.8, bg="white")
+"Shell Lake", "Upper Rice Lake"), pch = x$pch, col = x$col, cex = 0.8, bg = "white")
 
 title("Wild Rice Collection Sites")
 
