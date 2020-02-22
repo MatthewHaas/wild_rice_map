@@ -13,7 +13,8 @@ import geopandas as gpd
 import descartes
 import matplotlib.pyplot as plt
 import numpy as np
-from shapely.geometry import Point
+from shapely.geometry import Point # for Points()
+import Cartopy.crs as ccrs # for scale bar
 
 #counties = "shp_bdry_counties/County_Boundaries_in_Minnesota.shp"
 # I like the boundaries from the MN GIS source (projection is better), but the POLYGON geography coordinates do not work well with actual GPS coordinates (collection site data)
@@ -42,6 +43,7 @@ fig, ax = plt.subplots(1, figsize=(10,6))
 MN.plot(color="white", linewidth=1.0, ax=ax, edgecolor="black")
 nwr_points.plot(markersize=10, ax=ax, color="blue") # Need to figure out how to have each point be a unique color that I define to match R color scheme
 
+fig.suptitle("Northern Wild Rice Collection Sites", family="serif")
 ax.axis("off") # turn off the axis
 
 fig.savefig("map_export.png", dpi=300)
