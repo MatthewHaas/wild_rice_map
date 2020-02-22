@@ -41,7 +41,7 @@ nwr_points = gpd.GeoDataFrame(nwr_sites, geometry=points)
 
 fig, ax = plt.subplots(1, figsize=(10,6))
 MN.plot(color="white", linewidth=1.0, ax=ax, edgecolor="black")
-nwr_points.plot(markersize=10, ax=ax, color="blue") # Need to figure out how to have each point be a unique color that I define to match R color scheme
+nwr_points.plot(markersize=20, ax=ax, color="blue") # Need to figure out how to have each point be a unique color that I define to match R color scheme
 
 fig.suptitle("Northern Wild Rice Collection Sites", family="serif")
 ax.axis("off") # turn off the axis
