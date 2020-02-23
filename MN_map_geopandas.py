@@ -55,9 +55,11 @@ plantagenet = nwr_points[nwr_points.Location == "Plantagenet"]
 shell = nwr_points[nwr_points.Location == "Shell Lake"]
 upperrice= nwr_points[nwr_points.Location == "Upper Rice Lake"]
 
-fig, ax = plt.subplots(1, figsize=(8,8))
+fig, ax = plt.subplots(1, figsize=(12,8))
 MN.plot(color="white", linewidth=1.0, ax=ax, edgecolor="black")
 WI.plot(color="white", linewidth=1.0, ax=ax, edgecolor="black")
+ax.set_xlim(-97.3,-89.6)
+ax.set_ylim(43,50)
 aquatica.plot(marker="^", markersize=20, ax=ax, color="#cd0000" ) # Aquatica
 bass.plot(markersize=20, ax=ax, color="#ff0000") # Bass Lake
 bigfork.plot(markersize=20, ax=ax, color="#cd8500")# Big Fork River
