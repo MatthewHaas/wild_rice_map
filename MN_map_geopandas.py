@@ -38,10 +38,38 @@ nwr_points = gpd.GeoDataFrame(nwr_sites, geometry=points)
 # These lines of code are probably outdates/no longer needed, but I am keeping for now --commented out-- just in case I need to recover them
 #map_counties.plot()
 #variable = "COUNTY_NAM"
+# Not a very elegant approach, but this is how I think I need to go about plotting unique colors for each lake
+aquatica = nwr_points[nwr_points.Location == "Aquatica_species"]
+bass = nwr_points[nwr_points.Location == "Bass Lake"]
+bigfork = nwr_points[nwr_points.Location == "Big Fork River"]
+clearwater = nwr_points[nwr_points.Location == "Clearwater River"]
+dahler = nwr_points[nwr_points.Location == "Dahler Lake"]
+decker = nwr_points[nwr_points.Location == "Decker Lake"]
+garfield = nwr_points[nwr_points.Location == "Garfield Lake"]
+mudhen = nwr_points[nwr_points.Location == "Mud Hen Lake"]
+necktie = nwr_points[nwr_points.Location == "Necktie River"]
+ottertail = nwr_points[nwr_points.Location == "Ottertail River"]
+phantom = nwr_points[nwr_points.Location == "Phantom Lake"]
+plantagenet = nwr_points[nwr_points.Location == "Plantagenet"]
+shell = nwr_points[nwr_points.Location == "Shell Lake"]
+upperrice= nwr_points[nwr_points.Location == "Upper Rice Lake"]
 
 fig, ax = plt.subplots(1, figsize=(10,6))
 MN.plot(color="white", linewidth=1.0, ax=ax, edgecolor="black")
-nwr_points.plot(markersize=20, ax=ax, color="blue") # Need to figure out how to have each point be a unique color that I define to match R color scheme
+aquatica.plot(marker="^", markersize=20, ax=ax, color="#cd0000" ) # Aquatica
+bass.plot(markersize=20, ax=ax, color="#ff0000") # Bass Lake
+bigfork.plot(markersize=20, ax=ax, color="#cd8500")# Big Fork River
+clearwater.plot(markersize=20, ax=ax, color="#ffa600") # Clearwater River
+dahler.plot(markersize=20, ax=ax, color="#cdcd00") # Dahler Lake
+decker.plot(markersize=20, ax=ax, color="#ffff00") # Decker Lake
+garfield.plot(markersize=20, ax=ax, color="#00cd00") # Garfield Lake
+mudhen.plot(markersize=20, ax=ax, color="#00ff00") # Mud Hen Lake
+necktie.plot(markersize=20, ax=ax, color="#00008b") # Necktie River
+ottertail.plot(markersize=20, ax=ax, color="#0000ff") # Ottertail River
+phantom.plot(markersize=20, ax=ax, color="#cd3278") # Phantom Lake
+plantagenet.plot(markersize=20, ax=ax, color="#ee82ee") # Plantagenet
+shell.plot(markersize=20, ax=ax, color="#541a8b") # Shell Lake
+upperrice.plot(markersize=20, ax=ax, color="#a020f0") # Upper Rice Lake
 
 fig.suptitle("Northern Wild Rice Collection Sites", family="serif")
 ax.axis("off") # turn off the axis
