@@ -8,12 +8,19 @@ export PYTHONPATH=/home/jkimball/haasx092/.conda/
 export PYTHONPATH=/home/jkimball/haasx092/.conda/pkgs/descartes-1.1.0-py_4/site-packages/descartes
 export PYTHONPATH=/home/jkimball/haasx092/lib/python/
 
+# Start an interactive python session (change wall time based on need)
+#qsub -I -l nodes=1:ppn=4,mem=8gb,walltime=0:20:00 -q interactive
+
+module load python3
+ipython
+
 import pandas as pd
 import geopandas as gpd
 import descartes
 import matplotlib.pyplot as plt
 import numpy as np
-from shapely.geometry import Point # for Points()
+from shapely.geometry import Point # for Point()
+from matplotlib.lines import Line2D 
 import Cartopy.crs as ccrs # for scale bar
 
 #counties = "shp_bdry_counties/County_Boundaries_in_Minnesota.shp"
@@ -74,6 +81,26 @@ phantom.plot(markersize=20, ax=ax, color="#cd3278") # Phantom Lake
 plantagenet.plot(markersize=20, ax=ax, color="#ee82ee") # Plantagenet
 shell.plot(markersize=20, ax=ax, color="#541a8b") # Shell Lake
 upperrice.plot(markersize=20, ax=ax, color="#a020f0") # Upper Rice Lake
+
+# Generate info for legend
+legend_points = [Line2D([0],[0], color="#cd0000", marker="^", label="\textit{Z. aquatica}"), 
+				 Line2D([0],[0], color="#ff0000", marker="o", label="Bass Lake"), 
+				 Line2D([0],[0], color="#cd8500", marker="o", label="Big Fork River"), 
+				 Line2D([0],[0], color="#ffa600", marker="o", label="Clearwater River"), 
+				 Line2D([0],[0], color="#cdcd00", marker="o", label="Dahler Lake",), 
+				 Line2D([0],[0], color="#ffff00", marker="o", label="Decker Lake"), 
+				 Line2D([0],[0], color="#00cd00", marker="o", label="Garfield Lake"), 
+				 Line2D([0],[0], color="#00ff00", marker="o", label="Mud Hen Lake"), 
+				 Line2D([0],[0], color="#00008b", marker="o", label="Necktie River"), 
+				 Line2D([0],[0], color="#0000ff", marker="o", label="Ottertail River"), 
+				 Line2D([0],[0], color="#cd3278", marker="o", label="Phantom Lake"), 
+				 Line2D([0],[0], color="#ee82ee", marker="o", label="Plantagenet"), 
+				 Line2D([0],[0], color="#541a8b", marker="o", label="Shell Lake"), 
+				 Line2D([0],[0], color="#a020f0", marker="o", label="Upper Rice Lake")]
+
+# Plot the legend
+ax.legend(handles=legend_points, loc="center right")
+
 
 fig.suptitle("Northern Wild Rice Collection Sites", family="serif")
 ax.axis("off") # turn off the axis
