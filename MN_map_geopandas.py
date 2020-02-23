@@ -26,7 +26,8 @@ map_states = gpd.read_file(states) # read in counties
 nwr_sites = pd.read_csv(collection_sites) # read in collection sites
 
 # Select Minnesota from the US shape file
-MN = map_states[map_states.STATEFP == '27'] #MN is 27. I should probably also add WI which is 55
+MN = map_states[map_states.STATEFP == "27"] #MN is 27. I should probably also add WI which is 55
+WI = map_states[map_states.STATEFP == "55"]
 
 # This section is for converting the latitude and longitude data into a form recognizable to geopandas
 def make_point(row):
@@ -54,8 +55,9 @@ plantagenet = nwr_points[nwr_points.Location == "Plantagenet"]
 shell = nwr_points[nwr_points.Location == "Shell Lake"]
 upperrice= nwr_points[nwr_points.Location == "Upper Rice Lake"]
 
-fig, ax = plt.subplots(1, figsize=(10,6))
+fig, ax = plt.subplots(1, figsize=(8,8))
 MN.plot(color="white", linewidth=1.0, ax=ax, edgecolor="black")
+WI.plot(color="white", linewidth=1.0, ax=ax, edgecolor="black")
 aquatica.plot(marker="^", markersize=20, ax=ax, color="#cd0000" ) # Aquatica
 bass.plot(markersize=20, ax=ax, color="#ff0000") # Bass Lake
 bigfork.plot(markersize=20, ax=ax, color="#cd8500")# Big Fork River
