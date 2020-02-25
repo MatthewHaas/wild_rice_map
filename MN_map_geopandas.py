@@ -77,15 +77,15 @@ map_counties.plot(color="white", linewidth=1.0, ax=ax, edgecolor="black")
 #ax.set_ylim(43,50)
 aquatica.plot(marker="^", markersize=50, ax=ax, color="#cd0000" ) # Aquatica
 bass.plot(markersize=50, ax=ax, color="#ff0000") # Bass Lake
-bigfork.plot(markersize=50, ax=ax, color="#cd8500")# Big Fork River
+#bigfork.plot(markersize=50, ax=ax, color="#cd8500")# Big Fork River
 clearwater.plot(markersize=50, ax=ax, color="#ffa600") # Clearwater River
 dahler.plot(markersize=50, ax=ax, color="#cdcd00") # Dahler Lake
 decker.plot(markersize=50, ax=ax, color="#ffff00") # Decker Lake
 garfield.plot(markersize=50, ax=ax, color="#00cd00") # Garfield Lake
-mudhen.plot(markersize=50, ax=ax, color="#00ff00") # Mud Hen Lake
+#mudhen.plot(markersize=50, ax=ax, color="#00ff00") # Mud Hen Lake
 necktie.plot(markersize=50, ax=ax, color="#00008b") # Necktie River
 ottertail.plot(markersize=50, ax=ax, color="#0000ff") # Ottertail River
-phantom.plot(markersize=50, ax=ax, color="#cd3278") # Phantom Lake
+#phantom.plot(markersize=50, ax=ax, color="#cd3278") # Phantom Lake
 plantagenet.plot(markersize=50, ax=ax, color="#ee82ee") # Plantagenet
 shell.plot(markersize=50, ax=ax, color="#541a8b") # Shell Lake
 upperrice.plot(markersize=50, ax=ax, color="#a020f0") # Upper Rice Lake
@@ -93,15 +93,15 @@ upperrice.plot(markersize=50, ax=ax, color="#a020f0") # Upper Rice Lake
 # Generate info for legend
 legend_points = [Line2D([0],[0], color="#cd0000", marker="^", linestyle="none", label="$\it{Z. aquatica}$"), 
 				 Line2D([0],[0], color="#ff0000", marker="o", linestyle="none", label="Bass Lake"), 
-				 Line2D([0],[0], color="#cd8500", marker="o", linestyle="none", label="Big Fork River"), 
+				 #Line2D([0],[0], color="#cd8500", marker="o", linestyle="none", label="Big Fork River"), 
 				 Line2D([0],[0], color="#ffa600", marker="o", linestyle="none", label="Clearwater River"), 
 				 Line2D([0],[0], color="#cdcd00", marker="o", linestyle="none", label="Dahler Lake",), 
 				 Line2D([0],[0], color="#ffff00", marker="o", linestyle="none", label="Decker Lake"), 
 				 Line2D([0],[0], color="#00cd00", marker="o", linestyle="none", label="Garfield Lake"), 
-				 Line2D([0],[0], color="#00ff00", marker="o", linestyle="none", label="Mud Hen Lake"), 
+				 #Line2D([0],[0], color="#00ff00", marker="o", linestyle="none", label="Mud Hen Lake"), 
 				 Line2D([0],[0], color="#00008b", marker="o", linestyle="none", label="Necktie River"), 
 				 Line2D([0],[0], color="#0000ff", marker="o", linestyle="none", label="Ottertail River"), 
-				 Line2D([0],[0], color="#cd3278", marker="o", linestyle="none", label="Phantom Lake"), 
+				 #Line2D([0],[0], color="#cd3278", marker="o", linestyle="none", label="Phantom Lake"), 
 				 Line2D([0],[0], color="#ee82ee", marker="o", linestyle="none", label="Plantagenet"), 
 				 Line2D([0],[0], color="#541a8b", marker="o", linestyle="none", label="Shell Lake"), 
 				 Line2D([0],[0], color="#a020f0", marker="o", linestyle="none", label="Upper Rice Lake")]
