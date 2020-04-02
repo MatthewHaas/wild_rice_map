@@ -1,10 +1,11 @@
 # 25 February 2020
+# Udated: 02 April 2020 (made title and legend larger)
 # WD: /home/jkimball/haasx092/collection_map
 # Code for plotting a map of Minnesota & Wisconsin counties using geopandas
 # Data come from US Census Bureau: https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html
 
 # Start an interactive python session (change wall time based on need)
-#qsub -I -l nodes=1:ppn=4,mem=8gb,walltime=0:20:00 -q interactive
+#qsub -I -l nodes=1:ppn=4,mem=8gb,walltime=0:10:00 -q interactive
 
 # Load python3
 module load python3
@@ -70,42 +71,42 @@ upperrice= nwr_points[nwr_points.Location == "Upper Rice Lake"]
 # Start the plotting
 fig, ax = plt.subplots(1, figsize=(20,15))
 MN_WI.plot(color="white", linewidth=1.0, ax=ax, edgecolor="black")
-aquatica.plot(marker="^", markersize=75, ax=ax, color="#cd0000" ) # Aquatica
-bass.plot(markersize=75, ax=ax, color="#ff0000") # Bass Lake
-#bigfork.plot(markersize=75, ax=ax, color="#cd8500")# Big Fork River
-clearwater.plot(markersize=75, ax=ax, color="#ffa600") # Clearwater River
-dahler.plot(markersize=75, ax=ax, color="#cdcd00") # Dahler Lake
-decker.plot(markersize=75, ax=ax, color="#ffff00") # Decker Lake
-garfield.plot(markersize=75, ax=ax, color="#00cd00") # Garfield Lake
-mudhen.plot(markersize=75, ax=ax, color="#00ff00") # Mud Hen Lake
-necktie.plot(markersize=75, ax=ax, color="#00008b") # Necktie River
-ottertail.plot(markersize=75, ax=ax, color="#0000ff") # Ottertail River
-phantom.plot(markersize=75, ax=ax, color="#cd3278") # Phantom Lake
-plantagenet.plot(markersize=75, ax=ax, color="#ee82ee") # Plantagenet
-shell.plot(markersize=75, ax=ax, color="#541a8b") # Shell Lake
-upperrice.plot(markersize=75, ax=ax, color="#a020f0") # Upper Rice Lake
+aquatica.plot(marker="^", markersize=125, ax=ax, color="#cd0000" ) # Aquatica
+bass.plot(markersize=125, ax=ax, color="#ff0000") # Bass Lake
+#bigfork.plot(markersize=125, ax=ax, color="#cd8500")# Big Fork River
+clearwater.plot(markersize=125, ax=ax, color="#ffa600") # Clearwater River
+dahler.plot(markersize=125, ax=ax, color="#cdcd00") # Dahler Lake
+decker.plot(markersize=125, ax=ax, color="#ffff00") # Decker Lake
+garfield.plot(markersize=125, ax=ax, color="#00cd00") # Garfield Lake
+mudhen.plot(markersize=125, ax=ax, color="#00ff00") # Mud Hen Lake
+necktie.plot(markersize=125, ax=ax, color="#00008b") # Necktie River
+ottertail.plot(markersize=125, ax=ax, color="#0000ff") # Ottertail River
+phantom.plot(markersize=125, ax=ax, color="#cd3278") # Phantom Lake
+plantagenet.plot(markersize=125, ax=ax, color="#ee82ee") # Plantagenet
+shell.plot(markersize=125, ax=ax, color="#541a8b") # Shell Lake
+upperrice.plot(markersize=125, ax=ax, color="#a020f0") # Upper Rice Lake
 
 # Generate info for legend
-legend_points = [Line2D([0],[0], color="#cd0000", marker="^", linestyle="none", label="$\it{Z. aquatica}$"), 
-				 Line2D([0],[0], color="#ff0000", marker="o", linestyle="none", label="Bass Lake"), 
-				 #Line2D([0],[0], color="#cd8500", marker="o", linestyle="none", label="Big Fork River"), 
-				 Line2D([0],[0], color="#ffa600", marker="o", linestyle="none", label="Clearwater River"), 
-				 Line2D([0],[0], color="#cdcd00", marker="o", linestyle="none", label="Dahler Lake",), 
-				 Line2D([0],[0], color="#ffff00", marker="o", linestyle="none", label="Decker Lake"), 
-				 Line2D([0],[0], color="#00cd00", marker="o", linestyle="none", label="Garfield Lake"), 
-				 Line2D([0],[0], color="#00ff00", marker="o", linestyle="none", label="Mud Hen Lake"), 
-				 Line2D([0],[0], color="#00008b", marker="o", linestyle="none", label="Necktie River"), 
-				 Line2D([0],[0], color="#0000ff", marker="o", linestyle="none", label="Ottertail River"), 
-				 Line2D([0],[0], color="#cd3278", marker="o", linestyle="none", label="Phantom Lake"), 
-				 Line2D([0],[0], color="#ee82ee", marker="o", linestyle="none", label="Plantagenet"), 
-				 Line2D([0],[0], color="#541a8b", marker="o", linestyle="none", label="Shell Lake"), 
-				 Line2D([0],[0], color="#a020f0", marker="o", linestyle="none", label="Upper Rice Lake")]
+legend_points = [Line2D([0],[0], color="#cd0000", marker="^", markersize=25, linestyle="none", label="$\it{Z. aquatica}$"), 
+				 Line2D([0],[0], color="#ff0000", marker="o", markersize=25, linestyle="none", label="Bass Lake"), 
+				 #Line2D([0],[0], color="#cd8500", marker="o", markersize=25, linestyle="none", label="Big Fork River"), 
+				 Line2D([0],[0], color="#ffa600", marker="o", markersize=25, linestyle="none", label="Clearwater River"), 
+				 Line2D([0],[0], color="#cdcd00", marker="o", markersize=25, linestyle="none", label="Dahler Lake",), 
+				 Line2D([0],[0], color="#ffff00", marker="o", markersize=25, linestyle="none", label="Decker Lake"), 
+				 Line2D([0],[0], color="#00cd00", marker="o", markersize=25, linestyle="none", label="Garfield Lake"), 
+				 Line2D([0],[0], color="#00ff00", marker="o", markersize=25, linestyle="none", label="Mud Hen Lake"), 
+				 Line2D([0],[0], color="#00008b", marker="o", markersize=25, linestyle="none", label="Necktie River"), 
+				 Line2D([0],[0], color="#0000ff", marker="o", markersize=25, linestyle="none", label="Ottertail River"), 
+				 Line2D([0],[0], color="#cd3278", marker="o", markersize=25, linestyle="none", label="Phantom Lake"), 
+				 Line2D([0],[0], color="#ee82ee", marker="o", markersize=25, linestyle="none", label="Plantagenet"), 
+				 Line2D([0],[0], color="#541a8b", marker="o", markersize=25, linestyle="none", label="Shell Lake"), 
+				 Line2D([0],[0], color="#a020f0", marker="o", markersize=25, linestyle="none", label="Upper Rice Lake")]
 
 # Plot the legend
-ax.legend(handles=legend_points, loc="lower right", facecolor="white") # I thought facecolor would make background white vs. partially transparent. Maybe I'm using it wrong?
+ax.legend(handles=legend_points, loc="lower right", facecolor="white", prop={"size":25}) # I thought facecolor would make background white vs. partially transparent. Maybe I'm using it wrong?
 
 
-fig.suptitle("Northern Wild Rice Collection Sites", family="serif")
+fig.suptitle("Northern Wild Rice Collection Sites", fontsize=50, family="serif")
 ax.axis("off") # turn off the axis
 
 fig.savefig("map_export.png", dpi=300)
