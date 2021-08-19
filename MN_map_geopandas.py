@@ -98,7 +98,7 @@ legend_points = [Line2D([0],[0], color="#cd0000", marker="^", markersize=25, lin
 				 Line2D([0],[0], color="#00008b", marker="o", markersize=25, linestyle="none", label="Necktie River"), 
 				 Line2D([0],[0], color="#0000ff", marker="o", markersize=25, linestyle="none", label="Ottertail River"), 
 				 Line2D([0],[0], color="#cd3278", marker="o", markersize=25, linestyle="none", label="Phantom Lake"), 
-				 Line2D([0],[0], color="#ee82ee", marker="o", markersize=25, linestyle="none", label="Plantagenet"), 
+				 Line2D([0],[0], color="#ee82ee", marker="o", markersize=25, linestyle="none", label="Lake Plantagenet"), 
 				 Line2D([0],[0], color="#541a8b", marker="o", markersize=25, linestyle="none", label="Shell Lake"), 
 				 Line2D([0],[0], color="#a020f0", marker="o", markersize=25, linestyle="none", label="Upper Rice Lake")]
 
