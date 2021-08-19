@@ -105,8 +105,8 @@ legend_points = [Line2D([0],[0], color="#cd0000", marker="^", markersize=25, lin
 # Plot the legend
 ax.legend(handles=legend_points, loc="lower right", facecolor="white", prop={"size":25}) # I thought facecolor would make background white vs. partially transparent. Maybe I'm using it wrong?
 
-
-fig.suptitle("Northern Wild Rice Collection Sites", fontsize=50, family="serif")
+# The plot title has been commented out for publication--remove the pound symbol (#) from the next line if you want to re-add it for another purpose.
+#fig.suptitle("Northern Wild Rice Collection Sites", fontsize=50, family="serif")
 ax.axis("off") # turn off the axis
 
 fig.savefig("map_export.png", dpi=300)
