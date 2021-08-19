@@ -105,7 +105,7 @@ legend_points = [Line2D([0],[0], color="#cd0000", marker="^", markersize=25, lin
 				 Line2D([0],[0], color="#ee82ee", marker="o", markersize=25, linestyle="none", label="Lake Plantagenet"), 
 				 Line2D([0],[0], color="#541a8b", marker="o", markersize=25, linestyle="none", label="Shell Lake"), 
 				 Line2D([0],[0], color="#a020f0", marker="o", markersize=25, linestyle="none", label="Upper Rice Lake"),
-				 Line2D([0],[0], color="black", marker="*", markersize=25, linestyle="none", label="NCROC")]
+				 Line2D([0],[0], color="black", marker="*", markersize=50, linestyle="none", label="NCROC")]
 
 # Plot the legend
 ax.legend(handles=legend_points, loc="lower right", facecolor="white", prop={"size":25}) # I thought facecolor would make background white vs. partially transparent. Maybe I'm using it wrong?
