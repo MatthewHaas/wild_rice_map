@@ -67,7 +67,8 @@ ottertail = nwr_points[nwr_points.Location == "Ottertail River"]
 phantom = nwr_points[nwr_points.Location == "Phantom Lake"]
 plantagenet = nwr_points[nwr_points.Location == "Plantagenet"]
 shell = nwr_points[nwr_points.Location == "Shell Lake"]
-upperrice= nwr_points[nwr_points.Location == "Upper Rice Lake"]
+upperrice = nwr_points[nwr_points.Location == "Upper Rice Lake"]
+ncroc = nwr_points[nwr_points.Location == "NCROC"]
 
 # Start the plotting
 fig, ax = plt.subplots(1, figsize=(20,15))
@@ -86,6 +87,7 @@ phantom.plot(markersize=125, ax=ax, color="#cd3278") # Phantom Lake
 plantagenet.plot(markersize=125, ax=ax, color="#ee82ee") # Plantagenet
 shell.plot(markersize=125, ax=ax, color="#541a8b") # Shell Lake
 upperrice.plot(markersize=125, ax=ax, color="#a020f0") # Upper Rice Lake
+ncroc.plot(marker="*", markersize=125, ax=ax, color="black")
 
 # Generate info for legend
 legend_points = [Line2D([0],[0], color="#cd0000", marker="^", markersize=25, linestyle="none", label="$\it{Z. aquatica}$"), 
@@ -101,7 +103,8 @@ legend_points = [Line2D([0],[0], color="#cd0000", marker="^", markersize=25, lin
 				 Line2D([0],[0], color="#cd3278", marker="o", markersize=25, linestyle="none", label="Phantom Lake"), 
 				 Line2D([0],[0], color="#ee82ee", marker="o", markersize=25, linestyle="none", label="Lake Plantagenet"), 
 				 Line2D([0],[0], color="#541a8b", marker="o", markersize=25, linestyle="none", label="Shell Lake"), 
-				 Line2D([0],[0], color="#a020f0", marker="o", markersize=25, linestyle="none", label="Upper Rice Lake")]
+				 Line2D([0],[0], color="#a020f0", marker="o", markersize=25, linestyle="none", label="Upper Rice Lake"),
+				 Line2D([0],[0], color="black", marker="*", markersize=25, linestyle="none", label="NCROC")]
 
 # Plot the legend
 ax.legend(handles=legend_points, loc="lower right", facecolor="white", prop={"size":25}) # I thought facecolor would make background white vs. partially transparent. Maybe I'm using it wrong?
