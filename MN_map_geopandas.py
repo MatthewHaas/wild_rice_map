@@ -32,6 +32,7 @@ import Cartopy as ccrs # for scale bar
 # The issue of projection data from the US Census has been fixed; it's OK to use this file now.
 states = "cb_2018_us_county_20m/cb_2018_us_county_20m.shp" # ALL US counties
 collection_sites = "200224_wild_rice_samples.csv" # This updated file has GPS coordinates converted to Universal Transverse Mercator (UTM) format
+# Note about the file 200224_wild_rice_samples.csv: another row was added on 19 August 2021 in order to show the location of the NCROC on the map--but I decided against altering the name of the file.
 
 map_states = gpd.read_file(states) # read in counties
 nwr_sites = pd.read_csv(collection_sites) # read in collection sites
