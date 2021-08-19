@@ -1,5 +1,6 @@
 # 25 February 2020
 # Udated: 02 April 2020 (made title and legend larger)
+# Updated again: 19 August 2021 (add NCROC to map and remove title)
 # WD: /home/jkimball/haasx092/collection_map
 # Code for plotting a map of Minnesota & Wisconsin counties using geopandas
 # Data come from US Census Bureau: https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html
