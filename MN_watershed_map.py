@@ -26,7 +26,9 @@ import numpy as np
 from shapely.geometry import Point # for Point()
 import shapely.geometry
 from matplotlib.lines import Line2D
-import cartopy as ccrs # for scale bar
+from matplotlib_scalebar.scalebar import ScaleBar
+from matplotlib_scalebar.scalebar import SI_LENGTH
+#import cartopy as ccrs # for scale bar
 
 watersheds = "dnr_watersheds/dnr_watersheds_dnr_level_02_huc_04.shp"
 
