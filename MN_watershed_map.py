@@ -98,7 +98,8 @@ ax.legend(handles=legend_points, loc="lower right", facecolor="white", prop={"si
 
 # ccrs.scale_bar(ax, (-97, 40), length=150) ### not currently working--issue is with cartopy
 
-fig.suptitle("Nothern Wild Rice Collection Sites\nBy Watershed", family="serif")
+# If you want to re-add the title, remove the pound symbol (#) from the next line (it was commented out for publication)
+#fig.suptitle("Nothern Wild Rice Collection Sites\nBy Watershed", family="serif")
 ax.axis("off") # turn off the axis
 
 fig.savefig("watershed_map_export.png", dpi=300)
