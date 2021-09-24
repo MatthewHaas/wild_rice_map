@@ -99,7 +99,11 @@ legend_points = [Line2D([0],[0], color="#cd0000", marker="^", linestyle="none", 
 # Plot the legend
 ax.legend(handles=legend_points, loc="lower right", facecolor="white", prop={"size":15}) # I thought facecolor would make background white vs. partially transparent. Maybe I'm using it wrong?
 
-# ccrs.scale_bar(ax, (-97, 40), length=150) ### not currently working--issue is with cartopy
+# Define scalebar
+scalebar = ScaleBar(dx=1, units="m", dimension=SI_LENGTH, location="lower center", font_properties="Times-30")
+
+# Add scale bar
+ax.add_artist(scalebar)
 
 # If you want to re-add the title, remove the pound symbol (#) from the next line (it was commented out for publication)
 #fig.suptitle("Nothern Wild Rice Collection Sites\nBy Watershed", family="serif")
