@@ -96,7 +96,7 @@ legend_points = [Line2D([0],[0], color="#cd0000", marker="^", linestyle="none", 
 				 Line2D([0],[0], color="#cd3278", marker="o", linestyle="none", label="Phantom Lake"), 
 				 Line2D([0],[0], color="#ee82ee", marker="o", linestyle="none", label="Plantagenet"), 
 				 Line2D([0],[0], color="#541a8b", marker="o", linestyle="none", label="Shell Lake"), 
-				 Line2D([0],[0], color="#a020f0", marker="o", linestyle="none", label="Upper Rice Lake")
+				 Line2D([0],[0], color="#a020f0", marker="o", linestyle="none", label="Upper Rice Lake"),
 				 Line2D([0],[0], color="black", marker="*", markersize=25, linestyle="none", label="NCROC")]
 
 # Plot the legend
