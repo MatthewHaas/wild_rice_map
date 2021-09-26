@@ -103,7 +103,7 @@ legend_points = [Line2D([0],[0], color="#cd0000", marker="^", linestyle="none", 
 ax.legend(handles=legend_points, loc="lower right", facecolor="white", prop={"size":15}) # I thought facecolor would make background white vs. partially transparent. Maybe I'm using it wrong?
 
 # Define scalebar
-scalebar = ScaleBar(dx=1, units="m", dimension=SI_LENGTH, location="lower center", font_properties="Times-30")
+scalebar = ScaleBar(dx=1, units="m", dimension=SI_LENGTH, location="lower center", pad=-2, font_properties="Times-30")
 
 # Add scale bar
 ax.add_artist(scalebar)
