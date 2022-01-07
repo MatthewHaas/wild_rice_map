@@ -31,7 +31,13 @@ from matplotlib_scalebar.scalebar import ScaleBar
 from matplotlib_scalebar.scalebar import SI_LENGTH
 #import cartopy as ccrs # for scale bar
 
-watersheds = "dnr_watersheds/dnr_watersheds_dnr_level_02_huc_04.shp"
+# The original shape file (watersheds) only contains the watersheds for Minnesota
+# With the help of the Wisconsin DNR, I have separate shape files from both states using the Universal Transverse Mercator projection
+# The "UTM15" refers to the zone they are in; technically WI is in both, but the person who helped me at the Wisconsin DNR set these up for me.
+# The original code containing the path to the watershed has been commented out so it isn't functional but is still visible for future reference
+# watersheds = "dnr_watersheds/dnr_watersheds_dnr_level_02_huc_04.shp"
+wi = 'MN_WI_HUC4_WGS84_UTM15/WI_HUC4_WGS84_UTM15.shp'
+mn = 'MN_WI_HUC4_WGS84_UTM15/MN_HUC4_WGS84_UTM15.shp'
 
 collection_sites = "200224_wild_rice_samples.csv" # This updated file has GPS coordinates converted to Universal Transverse Mercator (UTM) format
 
