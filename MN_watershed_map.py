@@ -1,5 +1,6 @@
 # 29 February 2020
 # Updated: 24 September 2021
+# Updated again: 7 January 2022
 # WD: /home/jkimball/haasx092/collection_map
 # Code for plotting a map of Minnesota watersheds using geopandas
 # Data come from Minnesota GIS: 
