@@ -43,8 +43,14 @@ mn = 'MN_WI_HUC4_WGS84_UTM15/MN_HUC4_WGS84_UTM15.shp'
 
 collection_sites = "200224_wild_rice_samples.csv" # This updated file has GPS coordinates converted to Universal Transverse Mercator (UTM) format
 
-map_watersheds = gpd.read_file(watersheds) # read in watersheds
+#map_watersheds = gpd.read_file(watersheds) # read in watersheds (commented out but retaining for future references)
+# Read in separate MN and WI watershed files
+mn_dat = gpd.read_file(mn)
+wi_dat = gpd.read_file(wi)
 nwr_sites = pd.read_csv(collection_sites) # read in collection sites
+
+# Combine (concatenate) separate MN and WI watershed files
+map_watersheds = gpd.GeoDataFrame(pd.concat([mn_dat, wi_dat]))
 
 # This section is for converting the latitude and longitude data into a form recognizable to geopandas
 # The issue with the original projection issue is that the latitude and longitude needed to be converted to UTM format. I did the conversion of GPS coordinates with an online tool and created new columns in the CSV file containing the sample collection data.
